@@ -22,19 +22,21 @@ def avisa_letra_encontrada(total_encontrado)
     puts "Letra encontrada #{total_encontrado} vezes."
 end
 
+def avisa_escolhendo_palavra
+    puts "Escolhendo uma palavra secreta"
+end
+
+def avisa_palavra_escolhida(palavra_secreta)
+    puts "Palavra secreta com #{palavra_secreta.size} letras... boa sorte!"
+    palavra_secreta
+end
+
 def da_boas_vindas
     puts "Bem vindo ao jogo da forca"
     puts "Qual é o seu nome?"
     nome = gets.strip
     puts "\n\n\n\n\n\n"
     puts "Começaremos o jogo para você #{nome}."
-end
-
-def escolhe_paravra_secreta
-    puts "Escolhendo uma palavra secreta"
-    palavra_secreta = "programador"
-    puts "Palavra secreta com #{palavra_secreta.size} letras... boa sorte!"
-    palavra_secreta
 end
 
 def nao_quer_jogar?
