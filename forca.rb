@@ -5,6 +5,11 @@ def salva_rank(nome, pontos_totais)
     File.write "rank.txt", conteudo
 end
 
+def le_rank
+    conteudo = File.read "rank.txt"
+    conteudo.split "\n"
+end
+
 def escolhe_paravra_secreta
     avisa_escolhendo_palavra
     texto = File.read("dicionario.txt")
@@ -88,11 +93,17 @@ end
 def jogo_da_forca
     nome = da_boas_vindas
     pontos_totais = 0
+
+    avisa_campeao_atual le_rank
+
     loop do
         pontos_totais += joga nome
         avisa_pontos_totais pontos_totais
         
-        salva_rank nome, pontos_totais
+        if le_rank[1].to_i < pontos_totais
+            salva_rank nome, pontos_totais
+        end
+
         if nao_quer_jogar?
             break
         end    
