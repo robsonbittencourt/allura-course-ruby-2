@@ -41,7 +41,7 @@ end
 
 def nao_quer_jogar?
     puts "Deseja jogar novamente? (S/N)"
-    quero_jogar = gets.strip
+    quero_jogar = gets.strip.downcase
     nao_quero_jogar = quero_jogar.upcase == "N"
 end  
 
