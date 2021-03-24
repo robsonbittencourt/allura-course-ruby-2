@@ -1,3 +1,7 @@
+def avisa_pontos_totais(pontos_totais)
+    puts "Você possui #{pontos_totais} pontos."
+end    
+
 def avisa_chute_efetuado(chute)
     puts "Você já chutou #{chute}"
 end    
@@ -37,6 +41,7 @@ def da_boas_vindas
     nome = gets.strip
     puts "\n\n\n\n\n\n"
     puts "Começaremos o jogo para você #{nome}."
+    nome
 end
 
 def nao_quer_jogar?
