@@ -45,7 +45,7 @@ def joga(nome)
     chutes = []
     pontos_ate_agora = 0
 
-    while erros < 5
+    while erros < 4
         mascara = palavra_mascarada chutes, palavra_secreta
         chute = pede_um_chute_valido chutes, erros, mascara
         chutes << chute
@@ -57,7 +57,7 @@ def joga(nome)
             total_encontrado = palavra_secreta.count letra_procurada
 
             if total_encontrado == 0
-                avisa_letra_nao_encontrada
+                avisa_letra_nao_encontrada letra_procurada
                 erros += 1
             else
                 avisa_letra_encontrada total_encontrado
